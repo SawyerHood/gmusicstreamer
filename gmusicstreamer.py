@@ -215,10 +215,10 @@ def main():
         playlist_id = api.create_playlist("Pi queue")
         raw_input("\'Pi queue\' playlist created, add songs to it via google music and press any key to add.")
     songIds = list()
-    songs = api.get_playlist_songs(playlist_id)
+    """songs = api.get_playlist_songs(playlist_id)
     if songs != False:
         for song in songs:
-            songIds.append(song['id'])
+            songIds.append(song['id'])"""
 
     
     mainthread = iohandler(api, songIds, playlist_id, client)
